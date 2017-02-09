@@ -1,0 +1,20 @@
+CC = gcc
+
+all:
+	host
+	philosopher
+
+host		: host.c 
+		${CC} gcc -pthread host.c -o host
+		
+philosopher	:philosopher.c
+		${CC} gcc -pthread philosopher.c -o philosopher
+
+	
+
+clean:
+	rm chopstickfilename*
+
+
+
+

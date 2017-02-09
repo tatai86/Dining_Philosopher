@@ -1,0 +1,33 @@
+OVERVIEW:
+
+This README file is for the project
+
+host.c: The program gets its input from a screen as two arguments. This program will 
+	initialize all the semaphores and the host will fork new process which is the	
+	philosopher process.The host program controls the start of the philosophers then it lays 
+	down the table with the semaphores that is the chopstiks and then does all the clean up.
+
+
+philosopher.c: The philosopher code opens the semaphore 
+		for its left and right chopsticks  and then tries to pick up
+		first the left one then the right one.Then in the loop it first tries to
+		go in the hungry state then it tries to pickup the chopstick then after 
+		that when it has picked up the left and the right chopsticks then it goes
+		into the eating state.then it drops the left fork and then the right 
+		fork and then goes to the thinking state.This is exactly what a philosopher 
+		does.
+
+	Please follow these Commands to execute the code:
+
+	1. gcc -pthread philosopher.c -o philosopher
+	2. gcc -pthread host.c -o host
+	3. ./host [no. of philosophers] [no of Iterations]
+	4. rm chopstickfilename*
+	 
+
+
+
+Best Regards,
+
+Paramita Dutta
+Graduuate Research Assistant
